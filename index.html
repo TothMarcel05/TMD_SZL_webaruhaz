@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technős Webáruház</title>
+    <link rel="stylesheet" href="web.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <div id="logo-placeholder">🐢 Technős Logo</div>
+    </div>
+    <h1>Technős Informatikai Webáruház</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Termékkínálat</h2>
+        <div id="termekLista"></div>
+    </section>
+
+    <aside id="kosar-szekcio">
+        <h2>🛒 Kosár</h2>
+        <div id="kosar">
+            <p>A kosár még üres.</p>
+        </div>
+        <div id="osszesito"></div>
+        <button id="rendelesGomb" onclick="rendelesInditasa()" style="display:none;">Rendelés leadása</button>
+    </aside>
+</main>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <h3>Bankkártyás fizetés szimuláció</h3>
+        <input type="text" id="vevoNev" placeholder="Teljes név">
+        <input type="text" id="vevoCim" placeholder="Szállítási cím">
+        <input type="text" id="kartyaSzam" placeholder="Kártyaszám (16 számjegy)">
+        <div class="modal-buttons">
+            <button onclick="fizetesFolyamat()">Fizetés és Számla generálása</button>
+            <button class="cancel" onclick="modalBezar()">Mégse</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+header { background: #2c3e50; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+#logo-placeholder { font-size: 24px; font-weight: bold; color: #27ae60; }
+
+main { display: grid; grid-template-columns: 1fr 350px; gap: 20px; }
+
+#termekLista { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+
+.termek { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.termek img { width: 100%; height: 200px; object-fit: contain; }
+.tech { font-size: 0.85em; color: #666; padding-left: 20px; }
+.ar { font-size: 1.2em; font-weight: bold; color: #e67e22; }
+
+#kosar-szekcio { background: white; padding: 20px; border-radius: 10px; height: fit-content; position: sticky; top: 20px; }
+.kosar-elem { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 5px 0; font-size: 0.9em; }
+
+button { background: #27ae60; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; }
+button:hover { background: #219150; }
+button.cancel { background: #95a5a6; margin-top: 5px; }
+
+/* Modal */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: white; padding: 30px; border-radius: 10px; width: 400px; }
+.modal-content input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
